@@ -244,7 +244,7 @@ int main(void)
    setfillstyle(1, 15);
    floodfill(width / 2, height / 2, 15);
    char msg[80];
-   int gd = DETECT, gm, s, v, i, a, x3, x2, y3, y2;
+   int gd = DETECT, gm, s, v, i,  x3, x2, y3, y2;
    setbkcolor(15);
    loading(width, height);
    cleardevice();
@@ -254,6 +254,8 @@ int main(void)
    int ty = 50;
    int sx = 2;
    int sy = 2;
+   int shx=2;
+   int a=30;
    POINT cp;
    int choice = 0;
    int color = 0;
@@ -839,7 +841,7 @@ int main(void)
          {
             if (GetAsyncKeyState(VK_LBUTTON))
             {
-               int shx = 3;
+               
                line(cp.x, cp.y, cp.x + x1, cp.y);
                line(cp.x + x1, cp.y, cp.x + x1, cp.y + y1);
                line(cp.x + x1, cp.y + y1, cp.x, cp.y + y1);
@@ -858,7 +860,6 @@ int main(void)
          {
             if (GetAsyncKeyState(VK_LBUTTON))
             {
-               int a = 30;
                a = (a * 3.14) / 180;
                rectangle(cp.x, cp.y, cp.x + x1, cp.y + y1);
                long xr = x1 + ((x1)*cos(a) - (y1)*sin(a));
