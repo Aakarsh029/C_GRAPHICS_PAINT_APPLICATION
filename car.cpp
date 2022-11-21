@@ -61,7 +61,7 @@ void car()
 
         pieslice(120 + i, 370, 270 - i, 271 - i, 10);
 
-        // right whele
+        // left whele
         pieslice(220 + i, 370, 0 - i, 1 - i, 10);
 
         pieslice(220 + i, 370, 90 - i, 91 - i, 10);

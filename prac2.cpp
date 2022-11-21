@@ -155,6 +155,42 @@ void size2(int width, int height, int size)
    outtextxy(1340, 100 + height / 10, &*s.begin());
    outtextxy(1300, 100 + height / 10, (char *)"Y1:");
 }
+void size3(int width, int height, int size)
+{
+   string s = to_string(size);
+   outtextxy(1340, 150 + height / 10, &*s.begin());
+   outtextxy(1300, 150 + height / 10, (char *)"tx:");
+}
+void size4(int width, int height, int size)
+{
+   string s = to_string(size);
+   outtextxy(1340, 200 + height / 10, &*s.begin());
+   outtextxy(1300, 200 + height / 10, (char *)"ty:");
+}
+void size5(int width, int height, int size)
+{
+   string s = to_string(size);
+   outtextxy(1340, 250 + height / 10, &*s.begin());
+   outtextxy(1300, 250 + height / 10, (char *)"sx:");
+}
+void size6(int width, int height, int size)
+{
+   string s = to_string(size);
+   outtextxy(1340, 300 + height / 10, &*s.begin());
+   outtextxy(1300, 300 + height / 10, (char *)"sy:");
+}
+void size7(int width, int height, int size)
+{
+   string s = to_string(size);
+   outtextxy(1340, 350 + height / 10, &*s.begin());
+   outtextxy(1300, 350 + height / 10, (char *)"shx:");
+}
+void size8(int width, int height, int size)
+{
+   string s = to_string(size);
+   outtextxy(1340, 400 + height / 10, &*s.begin());
+   outtextxy(1300, 400 + height / 10, (char *)"angle:");
+}
 void loading(int width, int height)
 {
    readimagefile("Logowt.jpg", 385, 250, 585, 450); // to display image
@@ -244,7 +280,7 @@ int main(void)
    setfillstyle(1, 15);
    floodfill(width / 2, height / 2, 15);
    char msg[80];
-   int gd = DETECT, gm, s, v, i,  x3, x2, y3, y2;
+   int gd = DETECT, gm, s, v, i, x3, x2, y3, y2;
    setbkcolor(15);
    loading(width, height);
    cleardevice();
@@ -254,8 +290,9 @@ int main(void)
    int ty = 50;
    int sx = 2;
    int sy = 2;
-   int shx=2;
-   int a=30;
+   int shx = 2;
+   int a = 30;
+
    POINT cp;
    int choice = 0;
    int color = 0;
@@ -277,6 +314,12 @@ int main(void)
       sizze(width, height, size);
       size1(width, height, x1);
       size2(width, height, y1);
+      size3(width, height, tx);
+      size4(width, height, ty);
+      size5(width, height, sx);
+      size6(width, height, sy);
+      size7(width, height, shx);
+      size8(width, height, a);
       GetCursorPos(&cp);
 
       if (cp.y >= 700 && cp.y <= 720)
@@ -419,6 +462,50 @@ int main(void)
 
       rectangle(1335, height / 10 + 120, 1355, height / 10 + 140);
       line(1339, height / 10 + 130, 1351, height / 10 + 130);
+      // tx
+      rectangle(1300, height / 10 + 170, 1320, height / 10 + 190);
+      line(1304, height / 10 + 180, 1316, height / 10 + 180);
+      line(1310, height / 10 + 174, 1310, height / 10 + 186);
+
+      rectangle(1335, height / 10 + 170, 1355, height / 10 + 190);
+      line(1339, height / 10 + 180, 1351, height / 10 + 180);
+      // ty
+      rectangle(1300, height / 10 + 220, 1320, height / 10 + 240);
+      line(1304, height / 10 + 230, 1316, height / 10 + 230);
+      line(1310, height / 10 + 224, 1310, height / 10 + 236);
+
+      rectangle(1335, height / 10 + 220, 1355, height / 10 + 240);
+      line(1339, height / 10 + 230, 1351, height / 10 + 230);
+      // sx
+      rectangle(1300, height / 10 + 270, 1320, height / 10 + 290);
+      line(1304, height / 10 + 280, 1316, height / 10 + 280);
+      line(1310, height / 10 + 274, 1310, height / 10 + 286);
+
+      rectangle(1335, height / 10 + 270, 1355, height / 10 + 290);
+      line(1339, height / 10 + 280, 1351, height / 10 + 280);
+
+      // sy
+      rectangle(1300, height / 10 + 320, 1320, height / 10 + 340);
+      line(1304, height / 10 + 330, 1316, height / 10 + 330);
+      line(1310, height / 10 + 324, 1310, height / 10 + 336);
+
+      rectangle(1335, height / 10 + 320, 1355, height / 10 + 340);
+      line(1339, height / 10 + 330, 1351, height / 10 + 330);
+      // shx
+      rectangle(1300, height / 10 + 370, 1320, height / 10 + 390);
+      line(1304, height / 10 + 380, 1316, height / 10 + 380);
+      line(1310, height / 10 + 374, 1310, height / 10 + 386);
+
+      rectangle(1335, height / 10 + 370, 1355, height / 10 + 390);
+      line(1339, height / 10 + 380, 1351, height / 10 + 380);
+
+      // a
+      rectangle(1300, height / 10 + 420, 1320, height / 10 + 440);
+      line(1304, height / 10 + 430, 1316, height / 10 + 430);
+      line(1310, height / 10 + 424, 1310, height / 10 + 436);
+
+      rectangle(1335, height / 10 + 420, 1355, height / 10 + 440);
+      line(1339, height / 10 + 430, 1351, height / 10 + 430);
 
       if (GetAsyncKeyState(VK_LBUTTON) && cp.x >= 1300 && cp.x <= 1320 && cp.y >= (height / 10 + 20) && cp.y <= (height / 10 + 40))
       {
@@ -448,6 +535,66 @@ int main(void)
       if (GetAsyncKeyState(VK_LBUTTON) && cp.x >= 1335 && cp.x <= 1355 && cp.y >= (height / 10 + 120) && cp.y <= (height / 10 + 140))
       {
          y1--;
+         delay(100);
+      }
+      if (GetAsyncKeyState(VK_LBUTTON) && cp.x >= 1300 && cp.x <= 1320 && cp.y >= (height / 10 + 170) && cp.y <= (height / 10 + 190))
+      {
+         tx++;
+         delay(100);
+      }
+      if (GetAsyncKeyState(VK_LBUTTON) && cp.x >= 1335 && cp.x <= 1355 && cp.y >= (height / 10 + 170) && cp.y <= (height / 10 + 190))
+      {
+         tx--;
+         delay(100);
+      }
+      if (GetAsyncKeyState(VK_LBUTTON) && cp.x >= 1300 && cp.x <= 1320 && cp.y >= (height / 10 + 220) && cp.y <= (height / 10 + 240))
+      {
+         ty++;
+         delay(100);
+      }
+      if (GetAsyncKeyState(VK_LBUTTON) && cp.x >= 1335 && cp.x <= 1355 && cp.y >= (height / 10 + 220) && cp.y <= (height / 10 + 240))
+      {
+         ty--;
+         delay(100);
+      }
+      if (GetAsyncKeyState(VK_LBUTTON) && cp.x >= 1300 && cp.x <= 1320 && cp.y >= (height / 10 + 270) && cp.y <= (height / 10 + 290))
+      {
+         sx++;
+         delay(100);
+      }
+      if (GetAsyncKeyState(VK_LBUTTON) && cp.x >= 1335 && cp.x <= 1355 && cp.y >= (height / 10 + 270) && cp.y <= (height / 10 + 290))
+      {
+         sx--;
+         delay(100);
+      }
+      if (GetAsyncKeyState(VK_LBUTTON) && cp.x >= 1300 && cp.x <= 1320 && cp.y >= (height / 10 + 320) && cp.y <= (height / 10 + 340))
+      {
+         sy++;
+         delay(100);
+      }
+      if (GetAsyncKeyState(VK_LBUTTON) && cp.x >= 1335 && cp.x <= 1355 && cp.y >= (height / 10 + 320) && cp.y <= (height / 10 + 340))
+      {
+         sy--;
+         delay(100);
+      }
+      if (GetAsyncKeyState(VK_LBUTTON) && cp.x >= 1300 && cp.x <= 1320 && cp.y >= (height / 10 + 370) && cp.y <= (height / 10 + 390))
+      {
+         shx++;
+         delay(100);
+      }
+      if (GetAsyncKeyState(VK_LBUTTON) && cp.x >= 1335 && cp.x <= 1355 && cp.y >= (height / 10 + 370) && cp.y <= (height / 10 + 390))
+      {
+         shx--;
+         delay(100);
+      }
+      if (GetAsyncKeyState(VK_LBUTTON) && cp.x >= 1300 && cp.x <= 1320 && cp.y >= (height / 10 + 420) && cp.y <= (height / 10 + 440))
+      {
+         a++;
+         delay(100);
+      }
+      if (GetAsyncKeyState(VK_LBUTTON) && cp.x >= 1335 && cp.x <= 1355 && cp.y >= (height / 10 + 420) && cp.y <= (height / 10 + 440))
+      {
+         a--;
          delay(100);
       }
 
@@ -841,7 +988,7 @@ int main(void)
          {
             if (GetAsyncKeyState(VK_LBUTTON))
             {
-               
+
                line(cp.x, cp.y, cp.x + x1, cp.y);
                line(cp.x + x1, cp.y, cp.x + x1, cp.y + y1);
                line(cp.x + x1, cp.y + y1, cp.x, cp.y + y1);
